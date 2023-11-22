@@ -4,7 +4,6 @@ DialogueDome is a real-time chat application that allows users to join different
 
 ## Table of Contents
 - [Features](#features)
-- [Screenshots](#screenshots)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
@@ -17,11 +16,6 @@ DialogueDome is a real-time chat application that allows users to join different
 - **Real-time Chat:** Users can join chat rooms and send and receive real-time text messages.
 - **Location Sharing:** Users can share their current location with others in the chat.
 - **User Management:** Usernames are unique within a room, and the application provides notifications when users join or leave.
-
-## Screenshots
-
-<img src="./Screenshots/Screenshot 1.png">
-<img src="./Screenshots/Screenshot 2.png">
 
 ## Getting Started
 
