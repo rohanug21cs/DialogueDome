@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Set character set and viewport for responsiveness -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DialogueDome</title>
+     <!-- Link to external stylesheet for styling -->
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="centered-form">
+        <!-- Container for the form -->
+        <div class="centered-form__box">
+            <h1>DialogueDome</h1>
+             <!-- Form for user input with action attribute pointing to chat.html -->
+            <form action="/chat.html">
+                <!-- Input field for the username -->
+                <label for="username">Enter Your Name</label>
+                <input type="text" name="username" placeholder="Your Name" required>
+
+                <!-- Input field for the room name -->
+                <label for="room">Enter a Room Number</label>
+                <input type="text" name="room" placeholder="Room Name" required>
+                <!-- Button to submit the form and join the chat -->
+                <button>Join Now</button>
+            </form>
+        </div>
+        <!-- Container for an SVG image section -->
+        <div class="svg-section">
+            <img src="./img/8611170_3946509.svg" alt="SVG Image">
+        </div>
+    </div>
+</body>
+</html>

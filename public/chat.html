@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+    <head>
+        <title>DialogueDome</title>
+        <link rel="icon">
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+    <body>
+        <!-- Main chat -->
+        <div class="chat">
+            <!-- Sidebar container for room and user information -->
+            <div id="sidebar" class="sidebar--chat"></div>
+            <!-- Main chat area -->
+            <div class="main--chat">
+                <div id="messages" class="messages--chat"></div>
+                <div class="compose">
+                    <!-- Form for sending text messages -->
+                    <form id="message-form">
+                        <input name="message" type="text" placeholder="Message" required autocomplete="off"> 
+                        <!-- Button to send text messages -->
+                        <button id="send-button">
+                            <!-- SVG icon for sending messages -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send-fill" viewBox="0 0 16 16">
+                            <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z"/>
+                          </svg>
+                        </button>
+                    </form>
+
+                    <!-- Button to send location information -->
+                    <button id="send-location">
+                        <!-- SVG icon for sending location -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                      </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mustache.js templates for rendering messages and sidebar -->
+        <script id="message-template" type="text/html">
+            <!-- Template for a text message -->
+            <div class="message">
+                <p>
+                    <span class="message__name">{{username}}</span>
+                    <span class="message__meta">{{createdAt}}</span>
+                </p>
+                <p class="message-data">{{message}}</p>
+            </div>
+        </script>
+
+        <script id="location-message-template" type="text/html">
+            <!-- Template for a location message -->
+            <div class="message">
+                <p>
+                    <span class="message__name">{{username}}</span>
+                    <span class="message__meta">{{createdAt}}</span>
+                </p>
+                <p><a href="{{url}}" target="_blank">Current location</a></p>
+            </div>
+        </script>
+
+        <script id="sidebar-template" type="text/html">
+            <!-- Template for the sidebar displaying room and user information -->
+            <h2 class="room-title">Room Number: {{room}}</h2>
+            <h3 class="list-title">Users</h3>
+            <li class="users">
+                {{#users}}
+                    <li>{{username}}</li>
+                {{/users}}
+            </li>
+        </script>
+        <!-- External script dependencies -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.8.0/qs.min.js"></script>
+        <!-- Socket.io script for real-time communication -->
+        <script src="/socket.io/socket.io.js"></script>
+        <!-- Custom script for handling chat functionality -->
+        <script src="/js/chat.js"></script>
+    </body>
+</html>
