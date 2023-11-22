@@ -1,6 +1,6 @@
 # DialogueDome
 
-DialogueDome is a real-time chat application that allows users to join different chat rooms, send text messages, and share their current location.
+DialogueDome is a real-time chat application built with Node.js, Express, and Socket.IO. It enables users to engage in dynamic conversations by joining different chat rooms, sending real-time text messages, and sharing their current location. The application is designed to provide a seamless and interactive chatting experience.
 
 ## Table of Contents
 - [Features](#features)
